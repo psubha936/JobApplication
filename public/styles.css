@@ -1,0 +1,239 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: 'Arial', sans-serif;
+    background: radial-gradient(circle at center, #f0f0f0, #d0d0d0); /* Radial gradient background */
+    color: #333;
+    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Tabs Styling */
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.tab-button {
+    padding: 12px 24px;
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 5px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1.2em;
+}
+
+.tab-button.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.tab-button:hover {
+    background-color: #ccc;
+}
+
+/* Containers */
+.container {
+    max-width: 1000px;
+    margin: 50px auto;
+    background: #fefefe;
+    box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.2), 0px 0px 20px rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    padding: 40px;
+    text-align: center;
+}
+
+/* Title Styling */
+.container h1 {
+    margin-bottom: 30px;
+    color: #333;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+/* Form Styling */
+/* Form Styling */
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Left-align form */
+    gap: 15px;
+    margin-left: 20px;
+}
+
+form label {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    color: #555;
+    text-align: left;
+}
+
+form input, form select {
+    padding: 10px;
+    width: 80%;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+form .tooltip {
+    font-size: 0.9em;
+    color: #999;
+}
+
+/* Pagination Styling */
+.pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.pagination a {
+    text-decoration: none;
+    color: #007bff;
+    margin: 0 5px;
+    padding: 8px 12px;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+}
+
+.pagination a.active {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.container {
+    text-align: left; 
+}
+
+
+form input, form select {
+    padding: 10px;
+    width: 80%;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    outline: none;
+    margin-bottom: 10px;
+}
+
+form input[type="file"] {
+    display: none;
+}
+
+form button {
+    padding: 12px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+.tooltip {
+    font-size: 0.9em;
+    color: #888;
+    cursor: help;
+    margin-top: -10px;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table th, table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-size: 1em;
+}
+
+table th {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+table td a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+table td a:hover {
+    text-decoration: underline;
+}
+
+table td select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+/* Pagination Styling */
+.pagination a:hover {
+    background-color: #ddd;
+}
+
+
+/* Alignment Fixes */
+.container .tabs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    flex: 1;
+    margin: 0 5px;
+}
+
+form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.applied-jobs-container table {
+    margin-top: 30px;
+}
+
+/* Link Fixes */
+table td a {
+    color: #3498db;
+    text-decoration: none;
+    word-wrap: break-word;
+    max-width: 150px;
+    display: inline-block;
+}
+
+table td a:hover {
+    text-decoration: underline;
+}
+
+/* Status Edit Fix */
+td form {
+    display: inline;
+}

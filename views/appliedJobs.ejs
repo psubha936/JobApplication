@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Applied Jobs</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <!-- Tabs -->
+<!-- Applied Jobs Page (appliedJobs.ejs) -->
+<div class="tabs">
+    <button class="tab-button" onclick="window.location.href='/jobs/apply'">Apply Job</button>
+    <button class="tab-button active">View Applied Jobs</button>
+</div>
+
+
+    <!-- Applied Jobs Table -->
+    <div class="applied-jobs-container">
+        <h1>Your Applied Jobs</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Position</th>
+                    <th>Company Name</th>
+                    <th>Experience</th>
+                    <th>Resume</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% jobs.forEach(function(job) { %>
+                <tr>
+                    <td><%= job.position %></td>
+                    <td><%= job.companyName %></td>
+                    <td><%= job.experienceYears %> years</td>
+                    <td>
+                        <% if (job.resumeLink) { %>
+                            <a href="<%= job.resumeLink %>" target="_blank">View Resume</a>
+                        <% } else { %>
+                            No Resume Provided
+                        <% } %>
+                    </td>
+                    <td>
+                        <form action="/jobs/updateStatus" method="POST">
+                            <!-- Job ID as hidden input -->
+                            <input type="hidden" name="jobId" value="<%= job._id %>">
+                            
+                            <!-- Dropdown for status update -->
+                            <select name="status" onchange="this.form.submit()">
+                                <option value="in_progress" <%= job.status === 'in_progress' ? 'selected' : '' %>>In Progress</option>
+                                <option value="selected" <%= job.status === 'selected' ? 'selected' : '' %>>Selected</option>
+                                <option value="rejected" <%= job.status === 'rejected' ? 'selected' : '' %>>Rejected</option>
+                            </select>
+                        </form>
+                    </td>
+                    
+                </tr>
+                <% }); %>
+            </tbody>
+        </table>
+        
+        <!-- Pagination -->
+        <div class="pagination">
+            <% if (page > 1) { %>
+                <a href="/jobs/applied?page=<%= page - 1 %>&limit=<%= limit %>">Previous</a>
+            <% } %>
+            <% for (let i = 1; i <= Math.ceil(total / limit); i++) { %>
+                <a href="/jobs/applied?page=<%= i %>&limit=<%= limit %>" class="<%= page === i ? 'active' : '' %>"><%= i %></a>
+            <% } %>
+            <% if (page < Math.ceil(total / limit)) { %>
+                <a href="/jobs/applied?page=<%= page + 1 %>&limit=<%= limit %>">Next</a>
+            <% } %>
+        </div>
+        
+        
+    </div>
+</body>
+</html>

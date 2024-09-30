@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            padding: 20px;
+        }
+        .header {
+            background-color: #4CAF50;
+            padding: 10px;
+            text-align: center;
+            color: white;
+            border-radius: 10px 10px 0 0;
+        }
+        .header h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+        .content {
+            padding: 20px;
+        }
+        .content p {
+            font-size: 16px;
+            color: #333333;
+        }
+        .content strong {
+            color: #333333;
+        }
+        .content a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #f1f1f1;
+            border-radius: 0 0 10px 10px;
+            font-size: 12px;
+            color: #666666;
+        }
+        .footer .quote {
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+        .contact-info {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #e9f5e9;
+            border-radius: 10px;
+            text-align: left;
+            font-size: 14px;
+        }
+        .contact-info p {
+            margin: 5px 0;
+        }
+        .contact-info a {
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .social-links {
+            margin-top: 10px;
+            text-align: center;
+        }
+        .social-links a {
+            text-decoration: none;
+            margin: 0 10px;
+            display: inline-block;
+        }
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            display: inline-block;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+        }
+        .linkedin-icon {
+            background-color: #090a0a;
+        }
+        .github-icon {
+            background-color: #58b1de;
+        }
+        .social-icon img {
+            width: 50%;
+            height: 50%;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+
+<div class="email-container">
+    <div class="header">
+        <h1><span class="icon">💼</span>New Job Application</h1>
+    </div>
+    
+    <div class="content">
+        <p>Hello <strong>Hiring Team</strong>,</p>
+        <p>I hope this message finds you well. I wanted to express my interest in joining your esteemed organization for the position of <strong><%= position %></strong> at <strong><%= companyName %></strong>. I am enthusiastic about the opportunity and believe my experience and skills will be a valuable asset to your team.</p>
+
+        <p>Here are the details of my application:</p>
+        <ul>
+            <li><strong>Position:</strong> <%= position %></li>
+            <li><strong>Company:</strong> <%= companyName %></li>
+            <li><strong>Years of Experience:</strong> <%= experienceYears %></li>
+        </ul>
+        
+        <p>You can view my resume by clicking the following link:</p>
+        <p><a href="<%= resumeLink %>" target="_blank">View Resume</a></p>
+
+        <p>I look forward to the possibility of contributing to your team and would be thrilled to discuss this opportunity in further detail.</p>
+    </div>
+
+    <div class="contact-info">
+        <h3>Contact Information:</h3>
+        <p><strong>Name:</strong> Subhaprakash Nayak</p>
+        <p><strong>Phone:</strong> <a href="tel:+917504121364">+91 7504121364</a></p>
+        <p><strong>Email:</strong> <a href="mailto:psubha936@gmail.com">psubha936@gmail.com</a></p>
+    </div>
+
+    <div class="social-links">
+        <h4>Connect with me:</h4>
+        <a href="https://www.linkedin.com/in/subhaprakash-nayak" class="social-icon linkedin-icon" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+        </a>
+        <a href="https://github.com/psubha936" class="social-icon github-icon" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub">
+        </a>
+    </div>
+
+    <div class="footer">
+        <p class="quote">"Success is not the key to happiness. Happiness is the key to success."</p>
+        <p>Feel free to reach out to me on LinkedIn or GitHub for further collaboration.</p>
+    </div>
+</div>
+
+</body>
+</html>
