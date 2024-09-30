@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply Job</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="tabs">
+        <button class="tab-button active">Apply Job</button>
+        <button class="tab-button" onclick="window.location.href='/jobs/applied'">View Applied Jobs</button>
+    </div>
+    
+    <div class="container">
+        <h1>Apply for a Job</h1>
+        <form action="/jobs/apply" method="POST" enctype="multipart/form-data">
+            <label for="recruiterEmails">Recruiter Emails:</label>
+            <input type="text" name="recruiterEmails" id="recruiterEmails" placeholder="Enter recruiter emails" required>
+    
+            <label for="position">Position:</label>
+            <input type="text" name="position" id="position" placeholder="Enter job position" required>
+    
+            <label for="companyName">Company Name:</label>
+            <input type="text" name="companyName" id="companyName" placeholder="Enter company name" required>
+    
+            <label for="experienceYears">Years of Experience:</label>
+            <input type="number" name="experienceYears" id="experienceYears" placeholder="Enter your years of experience" required>
+    
+            <!-- Google Drive Link input box -->
+            <label for="resumeLink">Google Drive Link for Resume:</label>
+            <input type="url" name="resumeLink" id="resumeLink" placeholder="Enter Google Drive resume link">
+    
+            <!-- Resume Upload (disabled) -->
+            <label for="resume">Upload Resume (optional):</label>
+            <input type="file" name="resume" id="resume" disabled>
+            <span class="tooltip" title="This feature is coming soon!">Resume upload feature coming soon</span>
+    
+            <button type="submit">Submit Application</button>
+        </form>
+    </div>
+    
+    
+</body>
+</html>
